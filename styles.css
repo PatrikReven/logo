@@ -1,0 +1,257 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #121212, #181818);
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+    animation: gradientBG 10s infinite alternate;
+}
+
+@keyframes gradientBG {
+    0% {
+        background: linear-gradient(135deg, #121212, #181818);
+    }
+    100% {
+        background: linear-gradient(135deg, #181818, #121212);
+    }
+}
+
+header {
+    background: linear-gradient(90deg, #1DB954, #1ED760);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background 0.3s ease;
+}
+
+header:hover {
+    background: linear-gradient(90deg, #1ED760, #1DB954);
+}
+
+.logo svg {
+    height: 50px;
+    width: auto;
+}
+
+.spotify-decor {
+    width: 150px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    opacity: 0.8;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    z-index: 10;
+}
+
+.spotify-decor:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+#spotifyCanvas {
+    position: absolute;
+    margin-top: 50px;
+    right: 48%;
+    top: 7%;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.nav-links li a:hover {
+    color: #000;
+    transform: scale(1.1);
+}
+
+.signup-btn {
+    background: linear-gradient(135deg, #1DB954, #1A9C44);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.signup-btn:hover {
+    background: linear-gradient(135deg, #1A9C44, #1DB954);
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+}
+
+.signup-btn:active {
+    transform: scale(0.98);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.signup-btn:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(29, 185, 84, 0.5);
+}
+
+.hero {
+    text-align: center;
+    padding: 150px 20px;
+    background: linear-gradient(135deg, rgba(29, 185, 84, 0.8), rgba(18, 18, 18, 0.9)), url('Spotify.svg') no-repeat center;
+    background-size: cover;
+    background-position: top center;
+    color: white;
+    position: relative;
+    z-index: 1;
+    animation: parallax 3s ease-out infinite;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+    border-bottom: 5px solid #1DB954;
+}
+
+@keyframes parallax {
+    0% {
+        background-position: top center;
+    }
+    50% {
+        background-position: center center;
+    }
+    100% {
+        background-position: top center;
+    }
+}
+
+.hero h1 {
+    font-size: 4.5rem;
+    margin: 20px 0;
+    animation: fadeIn 1s ease-in-out;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.4rem;
+    margin: 10px 0 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.cta {
+    background: #1DB954;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.cta:hover {
+    background: #1a9c44;
+    transform: scale(1.1);
+}
+
+.cta:active {
+    transform: scale(0.98);
+}
+
+.features {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, rgba(18, 18, 18, 0.9), rgba(29, 185, 84, 0.8)), url('spotify-bg.svg') no-repeat center center;
+    background-size: cover;
+    text-align: center;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+}
+
+.features h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.feature-list {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.feature {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    border-radius: 15px;
+    width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    background: rgba(29, 185, 84, 0.6);
+}
+
+.feature-list .feature svg {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+    fill: #1DB954;
+    transition: transform 0.3s ease, fill 0.3s ease;
+}
+
+.feature:hover svg {
+    transform: scale(1.2);
+    fill: white;
+}
+
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background: #181818;
+    color: #ccc;
+    position: relative;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.footer-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('spotify-bg.svg') no-repeat center;
+    background-size: cover;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
